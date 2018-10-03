@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zerolab</title>
+    <link rel="stylesheet" href="assets/css/main.min.css">
+</head>
+<body>
+<section class="serv-page inner gora">
+    <div class="container">
+        <header class="white">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/zerolab-logo.png" alt="zerolab logo">
+                </a>
+            </div>
+            <div class="phone">
+                <img src="assets/images/top-phone.png" alt="top phone">
+                <a href="tel:88001234567">8 800 123-456-78</a>
+            </div>
+            <nav class="top-nav">
+                <ul class="top-nav-list">
+                    <li class="active"><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="carier.html">Карьера</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <div class="breadcrumbs white">
+             <span class="B_crumbBox">
+        <span class="B_firstCrumb">
+            <a class="B_homeCrumb" href="index.html" title="ZeroLab" rel="nofollow">Главная</a>
+        </span> -
+        <span class="B_lastCrumb">
+            <span class="B_currentCrumb">Контакты</span>
+        </span>
+    </span>
+        </div>
+        <h1 class="inner-header">Контакты</h1>
+    </div>
+</section>
+
+<section class="contacts">
+    <div class="container">
+        <div class="location">
+            <h4>Контакты</h4>
+            <ul>
+                <li>ООО “ZeroLab”</li>
+                <li class="contact-phone">Тел: <a href="tel:+79001234567">+7 900 123 4567</a></li>
+                <li class="contact-marker">603163, г.Нижний Новгород, <br>
+                    ул.Германа Лопатина, 8 (БЦ «Печерский»)</li>
+                <li class="contact-email"><a href="mailto:info@zerolab.tech">info@zerolab.tech</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="map"></div>
+</section>
+<section class="carier-form contact">
+    <div class="container">
+        <h2>Оставить заявку</h2>
+        <div class="resume-form-wrap">
+            <form  id="resume-form" >
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="text" name="secondname" placeholder="Фамилия">
+                <input type="text" class="phone" name="phone" placeholder="Номер телефона" required>
+                <input type="email" name="email" placeholder="Адрес эл. почты" required>
+                <input type="text" name="comment" placeholder="Комментарий">
+                <div class="upload-flex">
+                    <label for="resume" id="upload-resume">Вложить файл</label>
+                    <input type="file" name="resume" id="resume" required accept="*/*" title="Необходимо выбрать минимум один файл">
+                    <button class="button button-popup">отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container flex">
+        <div class="logo footer">
+            <a href="index.html">
+                <img src="assets/images/zerolab-logo.png" alt="zerolab logo">
+            </a>
+            <p>IT-решения</p>
+            <p>для эффективности вашего бизнеса</p>
+        </div>
+        <div class="footer-menu">
+            <ul class="footer-menu-list">
+                <li><a href="about.html">о компании</a></li>
+                <li><a href="projects.html">проекты</a></li>
+                <li><a href="technologic.html">технологии</a></li>
+            </ul>
+        </div>
+        <div class="footer-serv">
+            <h4>Услуги</h4>
+            <ul class="foo-serv-list">
+                <li><a href="develop.html">Разработка ПО</a></li>
+                <li><a href="testing.html">Тестирование</a></li>
+                <li><a href="design.html">Дизайн</a></li>
+                <li><a href="support.html">Сопровождение ПО</a></li>
+            </ul>
+            <ul class="footer-menu-list">
+                <li><a href="carier.html">карьера</a></li>
+                <li><a href="contacts.html">контакты</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyrigth 2018 - все права защищены
+                Копирование информации без указания
+                источника преследуется законом</p>
+            <a href="#" class="police">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+<div class="popup-overlay">
+    <div class="popup">
+        <span class="close"></span>
+        <h4>оставить заявку</h4>
+        <p>Отправьте краткое описание проекта. Мы проведем оценку
+            и подготовим коммерческое предложение в минимальные сроки.</p>
+        <form  id="popup-form">
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="text" name="secondname" placeholder="Фамилия">
+            <input type="text" class="phone" name="phone" placeholder="Номер телефона" required>
+            <input type="email" name="email" placeholder="Адрес эл. почты" required>
+            <input type="text" name="comment" placeholder="Комментарий">
+            <button class="button button-popup">отправить</button>
+        </form>
+    </div>
+</div>
+<script src="assets/js/libs.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV4ZllTzJ14qnI9ME5TqqqGvUXr-JrL94"></script>
+<script src="assets/js/common.js"></script>
+</body>
+</html>
+
