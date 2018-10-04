@@ -51,6 +51,30 @@ POPUP
         }
     });
     /* --------------------------------------------------------
+TABS
+----------------------------------------------------------- */
+    $(function() {
+        "use strict";
+        if ($(".tabs").length > 0) {
+            $('.tabs li').click(function (e) {
+                e.preventDefault();
+                var c = $(this).attr('data-tab');
+
+                $(".tabs li").each(function (index) {
+                    $(this).removeClass('active');
+                });
+
+                $(this).addClass('active');
+
+                $('[class^="tab-item-"]').each(function (index) {
+                    $(this).removeClass('curent');
+                });
+
+                $('.tab-item-' + c).addClass('curent');
+            });
+        }
+    });
+    /* --------------------------------------------------------
 HOVER IMAGES
 ----------------------------------------------------------- */
     $(function() {
