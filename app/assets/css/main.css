@@ -1350,15 +1350,19 @@ p.project-desc{
 .napravleniya{
     padding-top: 7.5rem;
     padding-bottom: 6.7rem;
-    background: url(../images/razrab-s2-bg.png) 50% 50% no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background: url(../images/razrab-s2-bg.png) 100% 0 no-repeat;
 }
 .napr-wrap{
     margin-top: 11.7rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.napr-wrap.testing{
+    margin-top: 6.4rem;
+}
+.napr-wrap.testing .napr-item{
+    justify-content: flex-start;
 }
 .napr-item {
     width: calc(100% / 3 - 4.5rem);
@@ -1550,7 +1554,7 @@ p.project-desc{
     justify-content: center;
     padding: 0 4rem;
     cursor: pointer;
-/*    box-shadow: 0 0 27px 0 rgba(251, 162, 159, 0.23);*/
+    margin-right: 0.5rem;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1591,13 +1595,16 @@ p.project-desc{
     border-left: 1.8rem solid #fba29f;
 }
 .tabs li.active:after{
-    content: none;
+    /* content: none;*/
 }
 .tabs-content{
     margin-top: 4rem;
     position: relative;
     overflow: hidden;
-    height: 55rem;
+    height: 45rem;
+}
+.tabs-content.support{
+    height: auto;
 }
 [class^="tab-item-"]{
     position:absolute;
@@ -1611,6 +1618,9 @@ p.project-desc{
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+}
+.support [class^="tab-item-"]{
+    position: relative;
 }
 [class^="tab-item-"].curent{
     right: 0;
@@ -1649,7 +1659,206 @@ p.project-desc{
     margin-bottom:0;
     padding-bottom: 1rem;
 }
-    /*********************** popup ***************************/
+.instrument{
+    padding-top: 8.2rem;
+    padding-bottom: 9.5rem;
+}
+.instrument-content{
+    margin-top: 10.7rem;
+}
+.instrument-content p{
+    line-height: 3rem;
+    margin-bottom: 3.5rem;
+}
+.instrument-content p:last-of-type{
+    margin-bottom:0;
+}
+.header-lowercase.testing{
+    margin-top: 10rem;
+    margin-bottom: 7.7rem;
+}
+.prj{
+    padding-top: 12rem;
+    padding-bottom: 9.4rem;
+    background: url(../images/prj-bg.png) 0 0 no-repeat;
+}
+.prj-wrap{
+    display: flex;
+}
+.prj-wrap>*{
+    width: 50%;
+}
+.prj-content{
+    padding-right: 10rem;
+}
+.prj h3{
+    color: #0e0f2c;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3.55rem;
+}
+.prj-content p{
+    color: #0e0f2c;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+.prj-content span{
+    color: #000;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 3rem;
+}
+.scr-img{
+    display: block;
+    max-height: 42.6rem ;
+    height: 42.6rem ;
+    border-radius: 5px;
+    position: relative;
+    padding-top: 4rem;
+    margin-bottom: 5rem;
+    box-shadow: 9px 16px 27px 0 rgba(0, 0, 0, 0.23);
+}
+.scr-img:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background:url(../images/brauser-tot-line.png) 100% 0 no-repeat;
+    cursor: pointer;
+}
+.scr-img:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.53) url(../images/lupa.png) 50% 50% no-repeat;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.scr-img:hover:after{
+    opacity: 1;
+}
+.scr-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.recomend{
+    width: 50%;
+    padding-right: 10rem;
+}
+.recomend p{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #0e0f2c;
+    font-weight: 300;
+}
+.recomend-footer{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.recomend-footer span{
+    display: block;
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+}
+.recomend-footer span:first-of-type{
+    font-weight: 700;
+}
+.technologic{
+    padding-top: 10rem;
+    padding-bottom: 19.6rem;
+    background: url(../images/tech-bg.png) 100% 100% no-repeat;
+}
+.design-wrap{
+    margin-top: 10.7rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.design-item {
+    width: calc(25% - 1.8rem);
+    padding: 3.8rem 5rem 3.6rem 3.4rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 300;
+    position: relative;
+}
+.design-item:before{
+    position: absolute;
+    content: '';
+    width: 5rem;
+    height: 0.2rem;
+    background-color: #fe553e;
+    left: 3.4rem;
+    top: 2rem;
+}
+.design-item:hover{
+    color: #fff;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.17);
+    background-image: linear-gradient(to top, #06212f, #0f3b4f);
+}
+.design-item:hover:before{
+    content: none;
+}
+.tech-map{
+    background-color: #f9f9f9;
+    padding-top: 6rem;
+    padding-bottom: 2.5rem;
+}
+.tech-map ul{
+    margin-top: 7.6rem;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    max-width: 88rem;
+}
+.tech-map ul li{
+    width: 50%;
+    margin-bottom: 7.8rem;
+}
+.tech-map ul li h4{
+    font-size: 3.6rem;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 1.3rem;
+}
+.tech-map ul li p{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.tech-map ul li h4:before{
+    position: absolute;
+    content: '';
+    width: 6.4rem;
+    height: 0.2rem;
+    background-color: #fe553e;
+    left: 0;
+    bottom: -0.6rem;
+}
+.tech-map ul li:hover h4:before{
+    width: 50%;
+}
+/*********************** popup ***************************/
 .popup-overlay{
     position: fixed;
     width: 100%;
@@ -1755,6 +1964,12 @@ p.project-desc{
 #popup-form input[name="phone"]{
     border-bottom: 2px solid #f93414;
 }
+/*********************** POLICE***************************/
+.layout { padding:1em 2%}
+.layout h1 {color:#000; font-size:2.2em; text-align:center}
+.layout h2 {color:#444; font-size:1.8em; text-align:center}
+.layout h3 {color:#222; font-size:1.6em; text-align:center}
+.layout p {color:#333; padding:0 0 0.5em; font:1em Arial; line-height:150%}
 /*********************** MOBILE ***************************/
 
 @media only screen and (max-width: 767px) {

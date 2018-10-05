@@ -1,5 +1,19 @@
 $(document).ready(function (){
     /* --------------------------------------------------------
+MFP
+----------------------------------------------------------- */
+    $(function() {
+        "use strict";
+        if ($(".mfp").length > 0) {
+            $('.scr-img').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        }
+    });
+    /* --------------------------------------------------------
 ANIMATION
 ----------------------------------------------------------- */
 
@@ -56,8 +70,10 @@ TABS
     $(function() {
         "use strict";
         if ($(".tabs").length > 0) {
+
             $('.tabs li').click(function (e) {
                 e.preventDefault();
+
                 var c = $(this).attr('data-tab');
 
                 $(".tabs li").each(function (index) {
