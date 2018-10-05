@@ -1,5 +1,28 @@
 $(document).ready(function (){
     /* --------------------------------------------------------
+FIXED MENU
+----------------------------------------------------------- */
+   if(document.body.clientWidth > 768) {
+
+       var fs = $('section:first-of-type').outerHeight(true);
+       console.log(fs);
+
+       $(window).scroll(function () {
+           if ($(this).scrollTop() > fs) {
+               $('nav.fixed').addClass('view');
+           } else {
+               $('nav.fixed').removeClass('view');
+           }
+       });
+
+       $("nav.fixed li a").each(function() {
+           if (this.href == window.location.href) {
+               $(this).parent('li').addClass("active");
+           }
+       });
+   }
+
+    /* --------------------------------------------------------
 MFP
 ----------------------------------------------------------- */
     $(function() {
