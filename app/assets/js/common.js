@@ -2,25 +2,25 @@ $(document).ready(function (){
     /* --------------------------------------------------------
 FIXED MENU
 ----------------------------------------------------------- */
-   if(document.body.clientWidth > 768) {
+    if(document.body.clientWidth > 768) {
 
-       var fs = $('section:first-of-type').outerHeight(true);
-       console.log(fs);
+        var fs = $('section:first-of-type').outerHeight(true);
+        console.log(fs);
 
-       $(window).scroll(function () {
-           if ($(this).scrollTop() > fs) {
-               $('nav.fixed').addClass('view');
-           } else {
-               $('nav.fixed').removeClass('view');
-           }
-       });
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > fs) {
+                $('nav.fixed').addClass('view');
+            } else {
+                $('nav.fixed').removeClass('view');
+            }
+        });
 
-       $("nav.fixed li a").each(function() {
-           if (this.href == window.location.href) {
-               $(this).parent('li').addClass("active");
-           }
-       });
-   }
+        $("nav.fixed li a").each(function() {
+            if (this.href == window.location.href) {
+                $(this).parent('li').addClass("active");
+            }
+        });
+    }
 
     /* --------------------------------------------------------
 MFP
@@ -40,14 +40,14 @@ MFP
 ANIMATION
 ----------------------------------------------------------- */
 
-    $('.slide-content').animate({
-        'padding-top':150,
-        'opacity':1
-    },1300);
+    /*   $('.slide-content').animate({
+           'padding-top':150,
+           'opacity':1
+       },1300);*/
 
-    $('.slide-content h1').animate({
-        'font-size':'6rem'
-    },1300);
+    /*    $('.slide-content h1').animate({
+            'font-size':'6rem'
+        },1300);*/
 
     $('.top-nav-list li a').animate({
         'left':0
@@ -158,11 +158,21 @@ LAVALAMP
                 dots: true,
                 loop: true,
                 center: true,
-                autoplay:0/*,
-                animateIn:'fadeInRight',
-                animateOut:'fadeOut'*/
+                autoplay: 1,
+                onTranslated: addclassslide
+
             });
         }
+        function addclassslide(event){
+            $('.owl-item').each(function (index) {
+                if($(this).hasClass('active')){
+                    $(this).children('.top-slider-item').children('.slide-img').addClass('fon');
+                }else{
+                    $(this).children('.top-slider-item').children('.slide-img').removeClass('fon');
+                }
+            });
+        }
+
         if ($("#cascade-slider").length > 0) {
 
             $('#cascade-slider').cascadeSlider({
