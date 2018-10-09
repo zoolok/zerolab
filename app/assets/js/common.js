@@ -1,8 +1,27 @@
 $(document).ready(function (){
+
+    /* --------------------------------------------------------
+MOBILE MENU
+----------------------------------------------------------- */
+
+    $('body').prepend('<span class="mobile-button">menu</span>');
+
+    $('.mobile-button').click(function (e) {
+        e.preventDefault();
+        $('.top-nav-list').toggleClass('mmshow');
+
+        $('.top-nav-list li').each(function (i) {
+            $(this).css('animation-duration', i/3 +'s');
+        });
+
+        $('.top-nav-list li').toggleClass('fadeInLeft');
+
+        $(this).toggleClass('wht');
+    });
     /* --------------------------------------------------------
 FIXED MENU
 ----------------------------------------------------------- */
-    if(document.body.clientWidth > 768) {
+    if(document.body.clientWidth > 0) {
 
         var fs = $('section:first-of-type').outerHeight(true);
         console.log(fs);
@@ -10,8 +29,10 @@ FIXED MENU
         $(window).scroll(function () {
             if ($(this).scrollTop() > fs) {
                 $('nav.fixed').addClass('view');
+                $('.mobile-button').addClass('bl');
             } else {
                 $('nav.fixed').removeClass('view');
+                $('.mobile-button').removeClass('bl');
             }
         });
 
@@ -173,7 +194,22 @@ LAVALAMP
             });
         }
 
-        if ($("#cascade-slider").length > 0) {
+        if ($(".mob-slider").length > 0 && document.body.clientWidth < 768) {
+
+            $(".mob-slider").addClass('owl-carousel');
+            $('.mob-slider').owlCarousel({
+                items: 1,
+                nav: true,
+                navText: ["", ""],
+                dots: true,
+                loop: true,
+                center: true,
+                autoplay: 0,
+            });
+
+        }
+
+        if ($("#cascade-slider").length > 0 && document.body.clientWidth > 768) {
 
             $('#cascade-slider').cascadeSlider({
                 itemClass: 'cascade-slider_item',
@@ -230,7 +266,6 @@ function initMap(xMap,yMap) {
     var mapOptions = {
         center: centerLatLng,
         disableDefaultUI: true,
-        //mapTypeId: google.maps.MapTypeId.ROADMAP,
         zoom: 17,
         styles:[
             {

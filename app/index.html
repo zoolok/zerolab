@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 <body>
+
 <nav class="fixed">
     <div class="container flex">
         <div class="logo">
@@ -33,7 +34,7 @@
 </nav>
 <section class="main">
     <div class="container">
-        <header>
+        <header class="">
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/images/zerolab-logo.png" alt="zerolab logo">
@@ -43,7 +44,7 @@
                 <img src="assets/images/top-phone.png" alt="top phone">
                 <a href="tel:88001234567">8 800 123-456-78</a>
             </div>
-            <nav class="top-nav">
+            <nav class="top-nav mobile-none">
                 <ul class="top-nav-list">
                     <li class="active"><a href="index.html">Главная</a></li>
                     <li><a href="about.html">О компании</a></li>
@@ -61,7 +62,7 @@
                         <span>на пределе возможностей</span></h1>
                     <a href="projects.html" class="button cons">проекты</a>
                 </div>
-                <div class="slide-img"></div>
+                <div class="slide-img mobile-none"></div>
             </div>
             <div class="top-slider-item"  data-slide="2">
                 <div class="slide-content">
@@ -69,14 +70,14 @@
                         вместе с ZeroLab</h1>
                     <a href="about.html" class="button cons">о компании</a>
                 </div>
-                <div class="slide-img"></div>
+                <div class="slide-img mobile-none"></div>
             </div>
             <div class="top-slider-item" data-slide="3">
                 <div class="slide-content">
                     <h1>Расширьте<br>IT - горизонты</h1>
                     <button class="button cons" data-action="popup">консультация</button>
                 </div>
-                <div class="slide-img"> </div>
+                <div class="slide-img mobile-none"> </div>
             </div>
         </div>
     </div>
@@ -162,39 +163,54 @@
     <div class="container">
         <h2 class="header">Наши лучшие проекты</h2>
         <div class="description-project">
-            <h4>Описание</h4>
-            <div class="project-wrap-0 active">
-                <div class="project-desc">
-                    <p>Разработали информационно-справочную систему законодательства Арабских Эмиратов. Внедрили личный кабинет для администраторов портала и внешних юристов. Провели интеграцию с механизмом оплаты международных платежей.</p>
+            <h4 class="mobile-none">Описание</h4>
+            <div class="mob-slider">
+                <div class="project-wrap-0 active">
+                    <div class="mob-img">
+                        <h4>LAW - EXPERT</h4>
+                        <a href="law-expert.html" class=""><img src="assets/images/law.png" alt="LAW - EXPERT"></a>
+                    </div>
+                    <div class="project-desc">
+                        <p>Разработали информационно-справочную систему законодательства Арабских Эмиратов. Внедрили личный кабинет для администраторов портала и внешних юристов. Провели интеграцию с механизмом оплаты международных платежей.</p>
+                    </div>
+                    <div class="project-button flex">
+                        <a href="law-expert.html" class="button prj-1">Обзор проекта</a><a href="projects.html" class="button prj-2">Все проекты</a>
+                    </div>
                 </div>
-                <div class="project-button flex">
-                    <a href="law-expert.html" class="button prj-1">Обзор проекта</a><a href="projects.html" class="button prj-2">Все проекты</a>
+                <div class="project-wrap-1">
+                    <div class="mob-img">
+                        <h4>НИПТ</h4>
+                        <a href="nipt.html"><img src="assets/images/nipt2.png" alt="нипт"></a>
+
+                    </div>
+                    <div class="project-desc">
+                        <p>Спроектировали и разработали систему автоматизации внутренних бизнес-процессов компании. Провели анализ рабочей деятельности сотрудников компании и сформировали оптимизированный регламент порядка их работ в системе. Ввели проект в эксплуатацию. Приняли проект на дальнейшее сопровождение.</p>
+                    </div>
+                    <div class="project-button flex">
+                        <a href="nipt.html" class="button prj-1">Обзор проекта</a><a href="projects.html" class="button prj-2">Все проекты</a>
+                    </div>
                 </div>
-            </div>
-            <div class="project-wrap-1">
-                <div class="project-desc">
-                    <p>Спроектировали и разработали систему автоматизации внутренних бизнес-процессов компании. Провели анализ рабочей деятельности сотрудников компании и сформировали оптимизированный регламент порядка их работ в системе. Ввели проект в эксплуатацию. Приняли проект на дальнейшее сопровождение.</p>
-                </div>
-                <div class="project-button flex">
-                    <a href="nipt.html" class="button prj-1">Обзор проекта</a><a href="projects.html" class="button prj-2">Все проекты</a>
-                </div>
-            </div>
-            <div class="project-wrap-2">
-                <div class="project-desc">
-                    <p>Выполнили разработку корпоративного портала компании. Модифицировали известную CMS DLE для нужд заказчика, в частности предоставили гибкий функционал для модератора сайта по ведению всего контента. Произвели импорт/миграцию данных на сайт из существующей информационной базы клиента.</p>
-                </div>
-                <div class="project-button flex">
-                    <a href="mkran.html" class="button prj-1">Обзор проекта</a><a href="projects.html" class="button prj-2">Все проекты</a>
+                <div class="project-wrap-2">
+                    <div class="mob-img">
+                        <h4>М-КРАН</h4>
+                        <a href="mkran.html"><img src="assets/images/mkran2.png" alt="мкран"></a>
+
+                    </div>
+                    <div class="project-desc">
+                        <p>Выполнили разработку корпоративного портала компании. Модифицировали известную CMS DLE для нужд заказчика, в частности предоставили гибкий функционал для модератора сайта по ведению всего контента. Произвели импорт/миграцию данных на сайт из существующей информационной базы клиента.</p>
+                    </div>
+                    <div class="project-button flex">
+                        <a href="mkran.html" class="button prj-1">Обзор проекта</a><a href="projects.html" class="button prj-2">Все проекты</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="cascade-slider_container" id="cascade-slider">
+    <div class="cascade-slider_container mobile-none" id="cascade-slider">
         <div class="cascade-slider_slides">
             <div class="cascade-slider_item">
                 <h4>LAW - EXPERT</h4>
-                <a href="law-expert.html"><img src="assets/images/law.png" alt="LAW - EXPERT"></a>
+                <a href="law-expert.html" class=""><img src="assets/images/law.png" alt="LAW - EXPERT"></a>
             </div>
             <div class="cascade-slider_item">
                 <h4>НИПТ</h4>

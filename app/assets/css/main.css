@@ -427,7 +427,7 @@ header:before{
 }
 .owl-nav {
     width: 48.6rem;
-    height: 8.2rem;
+    height: 82px;
     position: absolute;
     left: 0;
     bottom: -2.7rem;
@@ -705,7 +705,6 @@ h2.header:before{
     background: #008aff url(../images/left.png) 44% 50% no-repeat;
 }
 .cascade-slider_item h4{
-    display: none;
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
@@ -713,9 +712,16 @@ h2.header:before{
     width: 100%;
     top: -8.8rem;
     text-transform: uppercase;
+    opacity: 0;
 }
 .cascade-slider_item.now h4{
-    display: block;
+    opacity: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    transition-delay: 1s;
 }
 .cascade-slider_item.now img{
     max-width: 610px;
@@ -1938,6 +1944,10 @@ nav.fixed .container{
     align-items: center;
     height: 100%;
 }
+.mobile-button,
+.mob-img{
+    display: none;
+}
 /*********************** popup ***************************/
 .popup-overlay{
     position: fixed;
@@ -1970,7 +1980,7 @@ nav.fixed .container{
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
-    z-index: 1000;
+    z-index: 10001;
 }
 .close{
     position: absolute;
@@ -2050,19 +2060,684 @@ nav.fixed .container{
 .layout h2 {color:#444; font-size:1.8em; text-align:center}
 .layout h3 {color:#222; font-size:1.6em; text-align:center}
 .layout p {color:#333; padding:0 0 0.5em; font:1em Arial; line-height:150%}
+
 /*********************** MOBILE ***************************/
 
 @media only screen and (max-width: 767px) {
 
     html {
-        font-size: 42%;
-    }
-    .container {
-        max-width:100%;
-        padding: 0 15px;
-    }
-    .mobile-none{
-        display: none!important;
+        /* font-size: 42%;*/
     }
 
+    .container {
+        max-width: 100%;
+        /* padding: 0 15px;*/
+        /*  overflow: hidden;*/
+    }
+
+    .mobile-none {
+        display: none !important;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    header .phone {
+        display: none;
+    }
+
+    header:before {
+        content: none;
+    }
+
+    .main {
+        min-height: unset;
+    }
+
+    .logo {
+        padding: 1.5rem 0 0 1.5rem;
+    }
+
+    .fixed .logo {
+        padding: 0 0 0 1.5rem;
+    }
+
+    .logo img {
+        max-width: 5.1rem;
+        height: auto;
+    }
+
+    .owl-nav {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+
+    .owl-dots {
+        position: relative;
+        left: calc(50% - 11rem);
+        bottom: unset;
+        top: -3.3rem;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+        left: 1.5rem;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        left: unset;
+        right: 1.5rem;
+    }
+
+    .mobile-button {
+        position: fixed;
+        cursor: pointer;
+        top: 1rem;
+        right: 1.1em;
+        width: 3.9rem;
+        height: 3.1rem;
+        background: url(../images/burger.png) 0 0 no-repeat;
+        z-index: 10000;
+        color: #fff;
+        padding-top: 3.3rem;
+        font-size: 1.4rem;
+        display: block;
+        transition: all 0.3s;
+    }
+
+    .mobile-button.bl {
+        background: url(../images/burger-bl.png) 0 0 no-repeat;
+        z-index: 10000;
+        color: #000;
+        transition: all 0.3s;
+    }
+
+    .mobile-button.wht {
+        background: url(../images/close-menu.png) 0 0 no-repeat;
+        color: rgba(0, 4, 16, 0.96);
+    }
+
+    .slide-content {
+        padding-top: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .slide-content h1 {
+        font-size: 3.6rem;
+        font-weight: 400;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        margin-top: 5.7rem;
+    }
+
+    .button.cons {
+        margin: 0 auto;
+    }
+
+    .fixed .phone {
+        display: none;
+    }
+
+    .top-nav-list {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        flex-wrap: wrap;
+        background-color: rgba(0, 4, 16, 0.96);
+        padding-top: 7rem;
+        padding-left: 7.5rem;
+        transition: all 0.3s;
+        justify-content: flex-start;
+        align-items: start;
+    }
+
+    .top-nav-list.mmshow {
+        left: 0;
+        transition: all 0.3s;
+    }
+
+    .top-nav-list li {
+        width: 100%;
+        color: #fff;
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+
+    .about {
+        padding-top: 6.3rem;
+        padding-bottom: 5.7rem;
+    }
+
+    .about-wrap {
+        flex-wrap: wrap;
+        padding: 0 1.5rem;
+    }
+
+    .zerotext:after,
+    .zerotext:before {
+        content: none;
+    }
+
+    .zerotext {
+        font-weight: 300;
+        font-size: 4.8rem;
+        color: #000;
+        border: none;
+        width: auto;
+        height: auto;
+        margin: 0 auto 4rem auto;
+        padding: 0;
+    }
+
+    .zerotext .bottom-line::before {
+        background-color: #000;
+        bottom: -1.7rem;
+    }
+
+    .services {
+        padding-top: 0;
+    }
+
+    .button.about {
+        margin: 0 auto;
+    }
+
+    .serv-wpap {
+        padding: 5.5rem 1.5rem 5rem 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .serv-item {
+        width: 100%;
+    }
+
+    .serv-wpap:before,
+    .serv-wpap:after {
+        content: none;
+    }
+
+    h2.header {
+        font-size: 3.6rem;
+        text-align: center;
+    }
+
+    h2.header::before {
+        left: calc(50% - 15.56rem / 2);
+    }
+
+    .technology {
+        padding-top: 5rem;
+    }
+
+    .tech-list {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .tech-list > * {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 6.5rem;
+    }
+
+    .tech-list img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .technology p {
+        text-align: center;
+    }
+
+    .project {
+        padding-top: 8.5rem;
+        padding-bottom: 0;
+    }
+
+    .description-project {
+        padding: 0 1.5rem;
+    }
+
+    [class^="project-wrap-"] {
+        flex-wrap: wrap;
+    }
+
+    .project-desc {
+        width: 100%;
+    }
+
+    .project-button {
+        flex-wrap: wrap;
+        margin-top: 4.8rem;
+    }
+
+    .button.prj-1 {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: -0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cascade-slider_container {
+        background: url(../images/slide-mock-up.png) 0 0 no-repeat;
+        margin-top: 8.5rem;
+        background-size: contain;
+        overflow: hidden;
+    }
+
+    .cascade-slider_item.now img,
+    .cascade-slider_item img {
+        max-width: 100%;
+        height: auto;
+        -o-object-fit: cover;
+        object-fit: cover;
+        opacity: 1;
+        display: block;
+    }
+
+    .mob-img {
+        display: block;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .mob-img img {
+        width: 100%;
+        height: 20.5rem;
+        object-fit: cover;
+        display: block;
+        box-shadow: 0 18px 27px 0 rgba(0, 0, 0, 0.23);
+        margin-bottom: 2.7rem;
+    }
+
+    .description-project h4 {
+        margin-bottom: 9.2rem;
+        text-align: center;
+    }
+
+    [class^='project-wrap-'] {
+        display: block;
+        opacity: 1;
+    }
+
+    .mob-slider .owl-nav {
+        background-color: transparent;
+        top: 6rem;
+    }
+
+    .mob-slider.owl-carousel .owl-nav button.owl-prev,
+    .mob-slider.owl-carousel .owl-nav button.owl-next {
+        filter: invert(100%);
+    }
+
+    .owl-nav::before {
+        content: none;
+    }
+
+    .mob-slider.owl-carousel .owl-nav button.owl-prev {
+        left: 0;
+    }
+
+    .mob-slider.owl-carousel .owl-nav button.owl-next {
+        right: 0;
+    }
+
+    .mob-slider .owl-dots {
+        position: absolute;
+        top: 8.2rem;
+    }
+
+    .mob-slider.owl-carousel .owl-stage-outer {
+        padding-bottom: 0;
+    }
+
+    .contact-form {
+        background: none;
+        padding-top: 0;
+        overflow: hidden;
+        padding-bottom: 0;
+    }
+
+    #cons-form {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        border: none;
+        padding: 0 1.5rem;
+    }
+
+    #cons-form input {
+        height: 6.2rem;
+        border: 1px solid #a7a7a7;
+        border-radius: 3rem;
+        width: 100%;
+        margin-bottom: 2.3rem;
+    }
+
+    .button-cons {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .location {
+        width: 100%;
+        height: 39.5rem;
+        padding: 0 0 0 4rem;
+        top: -10rem;
+    }
+
+    #map {
+        width: 100%;
+        height: 62rem;
+        margin-top: 15rem;
+    }
+
+    footer .container {
+        flex-wrap: wrap;
+        padding: 0 2.5rem;
+    }
+    footer .container>* {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .footer.logo {
+        margin-right: 0;
+        margin-bottom: 5.4rem;
+        padding: 0;
+    }
+
+    .footer-menu {
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+
+    .copyright {
+        margin-top: 8rem;
+        text-align: center;
+    }
+
+    .popup {
+        max-width: 100%;
+        max-height: 100%;
+        padding: 2rem;
+    }
+
+    #popup-form {
+        margin-top: 1.5rem;
+    }
+
+    #popup-form input {
+        width: calc(50% - 1rem);
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+
+    .popup p {
+        font-size: 1.4rem;
+    }
+
+    .popup h4 {
+        font-size: 3rem;
+    }
+
+    .breadcrumbs {
+        margin-top: 2rem;
+    }
+
+    .about-text h1 {
+        font-size: 5.4rem;
+    }
+
+    .about-text p {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .main.about-page {
+        box-shadow: none;
+        background: url(../images/inner-bg.jpg) 0 0 no-repeat !important;
+        background-size: cover !important;
+        padding-bottom: 11.2rem;
+        height: auto;
+    }
+
+    .main.about-page:before {
+        content: none;
+    }
+
+    .about-ico-wrap {
+        color: #fff;
+        margin-top: 3.5rem;
+        padding: 0 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .about-item {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .button.button-svyaz {
+        color: #fff;
+    }
+
+    .button.button-svyaz:hover {
+        border-color: #fff;
+    }
+
+    h1.inner-header {
+        font-size:4rem;
+    }
+
+    .serv-item-inner {
+        width: 100%;
+        padding: 1.5rem;
+        min-height: 53rem;
+    }
+
+    .services-inner {
+        padding: 7.5rem 0 0;
+    }
+
+    .project-item-inner > * {
+        width: 100%;
+        margin: 2rem 0;
+      /*  padding: 0 1.5rem;*/
+    }
+
+    .button.serv {
+        position: relative;
+        bottom: unset;
+        margin-top: 3rem;
+    }
+
+    .project-list {
+        padding-top: 7.5rem;
+        padding-bottom: 0;
+    }
+    .rekrut-wrap {
+        flex-wrap: wrap;
+        padding: 0 1.5rem;
+    }
+    .rekrut-text {
+        padding-right: 0;
+        max-width: 100%;
+    }
+    .vedro img {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .rekrut {
+        padding-top: 7.5rem;
+        padding-bottom: 2.7rem;
+    }
+    .rekrut-text h2 {
+        color: #000a25;
+        font-size: 4rem;
+        line-height: 4.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    .carier-form h2 {
+        font-size: 3.7rem;
+        padding-left: 1.5rem;
+    }
+    .carier-ico-wrap {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+    .carier-ico {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    .resume-form-wrap {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+    #resume-form input {
+        width: 100%;
+        height: 5rem;
+        margin-bottom: 2rem;
+    }
+    .upload-flex {
+        flex-wrap: wrap;
+    }
+    #upload-resume {
+        margin-right: 0;
+    }
+    #resume-form button {
+        margin-top: 3rem;
+        height: 5.6rem;
+    }
+    .carier-form {
+        padding-bottom: 0;
+    }
+    .carier-form.contact {
+        padding-bottom: 2rem;
+    }
+    .contact #resume-form button {
+        margin: 3rem auto;
+    }
+    .prj {
+        padding-top: 7.5rem;
+        padding-bottom: 0;
+    }
+    .prj-wrap {
+        flex-wrap: wrap;
+    }
+    .prj-wrap > * {
+        width: 100%;
+    }
+    .prj-content,
+    .scrinshots {
+        padding:0 1.5rem;
+    }
+    .header-lowercase {
+        font-size: 3.3rem;
+    }
+    .recomend {
+        width: 100%;
+        padding:0 1.5rem;
+    }
+    .napravleniya{
+        padding: 7.5rem 1.5rem 6.7rem;
+    }
+    .napr-wrap {
+        margin-top: 8.7rem;
+    }
+    .napr-item {
+        width: 100%;
+    }
+    .etap-wrap,
+    .methods {
+        padding:0 1.5rem;
+    }
+    .etap-item {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .method-item {
+        width: 100%;
+    }
+    .method-item .flex{
+        flex-wrap: wrap;
+    }
+    .method-item h3 {
+        font-size: 3.2rem;
+    }
+    .example .container {
+        padding: 0 1.5rem;
+    }
+    .podhod .container{
+        padding: 0 1.5rem;
+    }
+    .tabs li {
+        font-size: 1.4rem;
+        padding: 0 1.5rem;
+        cursor: pointer;
+        margin-right: 2px;
+        flex-grow: 1;
+    }
+    .tabs li.active {
+        -webkit-transform: translateX(-0.8rem);
+        -ms-transform: translateX(-0.8rem);
+        transform: translateX(-0.8rem);
+        margin-left: 0;
+    }
+    .tabs li:after,
+    .tabs li:before{
+        content: none;
+    }
+    .tabs-content {
+        height: 120rem;
+    }
+    .celi-rezultaty-wrap{
+        flex-wrap: wrap;
+    }
+    .celi {
+        margin-bottom: 3rem;
+    }
+    .instrument {
+        padding-top: 8.2rem;
+        padding-bottom: 9.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .napravleniya {
+        padding: 3.5rem 1.5rem 3.5rem;
+    }
+    .ui-design {
+        padding: 0 1.5rem;
+    }
+    .design-item {
+        width: 100%;
+        padding: 3.8rem 5rem 3.6rem 3.4rem;
+    }
+    .technologic{
+        padding-bottom: 0;
+    }
+    .tech-map{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .tech-map ul li {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    .project-desc-inner {
+        padding: 0 1.5rem;
+    }
 }
+
