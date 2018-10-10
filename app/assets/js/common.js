@@ -101,10 +101,12 @@ POPUP
             $('[data-action="popup"]').click(function (e) {
                 e.preventDefault();
                 $(".popup-overlay").addClass('show');
+                $(".popup").addClass('border');
             });
             $('.close').click(function (e) {
                 e.preventDefault();
                 $(".popup-overlay").removeClass('show');
+                $(".popup").removeClass('border');
             });
         }
     });
@@ -248,6 +250,45 @@ LAVALAMP
                 });
             })
         }
+    });
+    /* --------------------------------------------------------
+        SEND FORM
+----------------------------------------------------------- */
+
+    $(function() {
+
+        var formP = $('#popup-form');
+        var formC = $('#cons-form');
+
+        formP.submit(function () {
+            $.ajax({
+                type: "POST",
+                url: "mail.php/?action=popup",
+                data: $(this).serialize()
+            }).done(function(data) {
+                formP.trigger('reset');
+                formP.html("<p>Спасибо за обращение! <br> Мы свяжемся с Вами в ближайшее время</p>");
+
+                setTimeout(function(){
+                    $('.close').trigger("click");
+                }, 1500);
+
+            });
+            return false;
+        });
+
+        formC.submit(function () {
+            $.ajax({
+                type: "POST",
+                url: "mail.php/?action=cons",
+                data: $(this).serialize()
+            }).done(function(data) {
+                formC.trigger('reset');
+                formC.html("<p>Спасибо за обращение! <br> Мы свяжемся с Вами в ближайшее время</p>");
+            });
+            return false;
+        });
+
     });
 });
 
