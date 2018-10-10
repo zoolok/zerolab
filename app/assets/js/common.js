@@ -179,7 +179,7 @@ LAVALAMP
                 dots: true,
                 loop: true,
                 center: true,
-                autoplay: 0,
+                autoplay: 1,
                 onTranslated: addclassslide
 
             });
