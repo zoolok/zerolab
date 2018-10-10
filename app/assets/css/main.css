@@ -203,8 +203,8 @@ header.white{
 }
 
 .backLava{
-    top: 33px!important;
-    height: 3px!important;
+    top: 3.3rem!important;
+    height: 0.3rem!important;
     background-color: #000!important;
 }
 .white .backLava{
@@ -285,20 +285,29 @@ header:before{
 }
 .slide-content{
     padding-top: 15rem;
-    margin-right: 14.8rem;
     opacity: 1;
     animation-delay: 2s;
     animation-duration: 2s;
 }
 .slide-img {
-    position: absolute;
-    right: 23.4rem;
-    bottom: -17rem;
+    position: relative;
+    top: 10rem;
     width: 35.3rem;
     height: 44.1rem;
 }
+[data-slide='1'] .slide-content{
+    margin-right: 8rem;
+}
+[data-slide='2'] .slide-content{
+    margin-right: 5rem;
+}
+[data-slide='3'] .slide-content{
+    margin-right: 15.1rem;
+}
 [data-slide='1']>.slide-img{
     background: url(../images/slide-img-1-1.png) 0 0 no-repeat;
+    background-size: cover;
+
 }
 [data-slide='1']>.slide-img:before{
     position: absolute;
@@ -306,20 +315,23 @@ header:before{
     top: 4.1rem;
     left: -6rem;
     width: 47.6rem;
-    height: 44.8rem;
+    height: 39.8rem;
     background: url(../images/slide-img-1-2.png) 0 0 no-repeat;
+    background-size: cover;
 }
 [data-slide='2']>.slide-img{
     background: url(../images/slide-img-2-1.png) 0 0 no-repeat;
+    background-size: cover;
 }
 [data-slide='2']>.slide-img:before{
     position: absolute;
     content: '';
     top: 4.1rem;
     left: 0;
-    width: 47.6rem;
-    height: 44.8rem;
+    width: 35.3rem;
+    height: 40rem;
     background: url(../images/slide-img-2-1-2.jpg) 0 0 no-repeat;
+    background-size: cover;
     opacity: 0;
     transition: opacity 2s;
     transition-delay: 2s;
@@ -331,15 +343,17 @@ header:before{
 }
 [data-slide='3']>.slide-img{
     background: url(../images/slide-img-3-1.png) 0 0 no-repeat;
+    background-size: cover;
 }
 [data-slide='3']>.slide-img:before{
     position: absolute;
     content: '';
-    top: -1rem;
+    top: 3.1rem;
     left: 0;
-    width: 47.6rem;
-    height: 44.8rem;
+    width: 38.8rem;
+    height: 40.9rem;
     background: url(../images/slide-img-3-2.png) 0 0 no-repeat;
+    background-size: cover;
     opacity: 0;
     transition: opacity 2s;
 }
@@ -966,6 +980,8 @@ h2.header:before{
     top: calc(50% - 2.8rem/2);
     left: 0;
     background: url(../images/cont-phone-ico.png) 0 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .contact-marker:before{
     position: absolute;
@@ -975,6 +991,8 @@ h2.header:before{
     top: calc(50% - 3.3rem/2);
     left: 0;
     background: url(../images/map-marker-ico.png) 0 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .contact-email:before{
     position: absolute;
@@ -984,6 +1002,8 @@ h2.header:before{
     top: calc(50% - 1.8rem/2);
     left: 0;
     background: url(../images/mail-ico.png) 0 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 footer{
     background-color: #19191d;
@@ -1372,6 +1392,8 @@ p.project-desc{
     width: 1.7rem;
     height: 3.3rem;
     background: url(../images/skrepka.png) 0 0 no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
     cursor: pointer;
     left: calc(100% + 3rem);
     top: calc(50% - 3.3rem/2);
@@ -2062,6 +2084,30 @@ nav.fixed .container{
 .layout p {color:#333; padding:0 0 0.5em; font:1em Arial; line-height:150%}
 
 /*********************** MOBILE ***************************/
+    @media only screen and (min-width: 768px) and (max-width:1024px){
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+        html {
+             font-size: 41.7%;
+        }
+        .project {
+            overflow: hidden;
+        }
+        .cascade-slider_item.now {
+            left: 51%;
+        }
+        nav.fixed {
+            height: 12rem;
+        }
+        .vedro img {
+            width: 64rem;
+        }
+        .rekrut{
+            overflow: hidden;
+        }
+    }
 
 @media only screen and (max-width: 767px) {
 

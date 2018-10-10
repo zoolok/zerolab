@@ -11,10 +11,10 @@ MOBILE MENU
         $('.top-nav-list').toggleClass('mmshow');
 
         $('.top-nav-list li').each(function (i) {
-            $(this).css('animation-duration', i/3 +'s');
+            $(this).css('animation-duration', i/3 +'s').toggleClass('fadeInLeft');
         });
 
-        $('.top-nav-list li').toggleClass('fadeInLeft');
+
 
         $(this).toggleClass('wht');
     });
@@ -179,7 +179,7 @@ LAVALAMP
                 dots: true,
                 loop: true,
                 center: true,
-                autoplay: 1,
+                autoplay: 0,
                 onTranslated: addclassslide
 
             });
