@@ -111,6 +111,7 @@ a:hover {
 /*********************** INDEX ****************************/
 .main{
     background: url(../images/main-bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
     color: #fff;
     box-shadow: 6px 10px 13px 0 rgba(0, 0, 0, 0.61);
     min-height: 70.3rem;
