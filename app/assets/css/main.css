@@ -490,6 +490,8 @@ header:before{
     left: 0;
     bottom: 0.9rem;
     width: -moz-max-content;
+    width: max-content;
+    z-index: 10;
 }
 .owl-carousel button.owl-dot{
     width: 6rem;
@@ -2802,6 +2804,15 @@ nav.fixed .container{
     }
     .project-desc-inner {
         padding: 0 1.5rem;
+    }
+    [data-slide='1'] .slide-content{
+        margin-right:0;
+    }
+    [data-slide='2'] .slide-content{
+        margin-right: 0;
+    }
+    [data-slide='3'] .slide-content{
+        margin-right: 0;
     }
 }
 
