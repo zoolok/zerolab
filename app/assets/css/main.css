@@ -1376,7 +1376,8 @@ p.project-desc{
 #resume-form input[name="resume"]{
     display: none;
 }
-#resume-form input[name="phone"]{
+#resume-form input:active,
+#resume-form input:focus{
     border-bottom: 2px solid #f93414;
 }
 .upload-flex{
@@ -2093,7 +2094,8 @@ nav.fixed .container{
 #popup-form input[name="comment"]{
     width: 100%;
 }
-#popup-form input[name="phone"]{
+#popup-form input:active,
+#popup-form input:focus{
     border-bottom: 2px solid #f93414;
 }
 /*********************** POLICE***************************/
